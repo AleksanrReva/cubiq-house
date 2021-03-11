@@ -1,0 +1,138 @@
+          /* Стили страницы */
+.page {
+  font-family: 'Nunito', 'Arial', sans-serif;
+  font-weight: 300;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.page_uppercase {
+  text-transform: uppercase;
+}
+
+          /* Общие стили */
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.focus {
+  font-weight: 700;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.extra-light {
+  font-weight: 200;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.font-size-24 {
+  font-size: 1.5rem;
+}
+
+.descriptor {
+  font-size: .75rem;
+}
+
+.style-none {
+  list-style: none;
+  /* margin-top: 12px; */
+  margin: 0;
+  padding: 0;
+}
+
+          /* Стили шапки */
+.page__header {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header__top {
+  margin-top: 43px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+          /* Стили шапки: Лого, тел, сети  */
+.logo__item {
+  margin: 0;
+  margin-left: 41px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.info__links {
+  margin-right: 41px;
+}
+
+.contacts__phone {
+  font-size: 2.25rem;
+}
+
+.soc-list {
+  display: flex;
+}
+
+.soc-list__item {
+  margin-top: 13px;
+  margin-left: 17px;
+  margin-right: 5px;
+}
+
+          /* Стили шапки: Лого страницы, меню  */
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu {
+  max-width: 583px;
+
+  margin: 0 auto;
+  margin-top: 173px;
+}
+
+.logo__descript {
+  max-width: 215px;
+  margin-top: 16px;
+
+  line-height: 1rem;
+}
+
+.menu__links {
+  margin-top: 10px;
+}
+
+.links__item {
+  line-height: 2.5rem;
+}
