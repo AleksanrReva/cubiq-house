@@ -1,4 +1,4 @@
-          /* Стили страницы */
+          /* Страница */
 .page {
   font-family: 'Nunito', 'Arial', sans-serif;
 
@@ -14,8 +14,11 @@
   text-transform: uppercase;
 }
 
-          /* Общие стили */
+          /* Общие */
 * {
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -40,31 +43,31 @@
   text-align: right;
 }
 
-.extra-light {
+.font_extra-light {
   font-weight: 200;
 }
 
-.light {
+.font_light {
   font-weight: 300;
 }
 
-.regular {
+.font_regular {
   font-weight: 400;
 }
 
-.font-size-18 {
+.font_size-18 {
   font-size: 1.13rem;
 }
 
-.font-size-24 {
+.font_size-24 {
   font-size: 1.5rem;
 }
 
-.font-size-36 {
+.font_size-36 {
   font-size: 2.25rem;
 }
 
-.descriptor {
+.font_size-12 {
   font-size: .75rem;
 }
 
@@ -79,7 +82,7 @@
   margin: 0 auto;
 }
 
-          /* Стили шапки */
+          /* Шапка общее */
 .header__top {
   margin-top: 43px;
 }
@@ -89,7 +92,7 @@
   justify-content: space-between;
 }
 
-          /* Стили шапки: Лого, тел, сети  */
+          /* Шапка: Лого, тел, сети  */
 .logo__item {
   margin: 0;
   margin-left: 41px;
@@ -105,10 +108,6 @@
   margin-right: 41px;
 }
 
-.contacts__phone {
-
-}
-
 .soc-list {
   display: flex;
 }
@@ -119,7 +118,7 @@
   margin-right: 5px;
 }
 
-          /* Стили шапки: Лого страницы, меню  */
+          /* Шапка: Лого страницы, меню  */
 .menu {
   display: flex;
   justify-content: space-between;
@@ -133,7 +132,7 @@
   margin-top: 173px;
 }
 
-.logo__descript {
+.logo-page__descript {
   max-width: 215px;
   margin-top: 16px;
 
@@ -148,16 +147,27 @@
   line-height: 2.5rem;
 }
 
-          /* Стили контента */
+          /* Контент */
 .project {
   display: flex;
 }
 
+          /* Контент: Описание */
 .project__text {
   max-width: 342px;
   margin-left: 57px;
 
   text-align: right;
+}
+
+.text__header {
+  margin: 0;
+  line-height: 2rem;
+}
+
+.text__subheader {
+  margin-top: 5.38rem;
+  line-height: 1.4rem;
 }
 
 .text__paragraph {
@@ -168,12 +178,78 @@
   line-height: 1.33rem;
 }
 
-/* margin: 0;
-line-height: 2rem; */
-
-/* margin-top: 86px;
-line-height: 1.4rem; */
-
 /* display: flex;
 flex-direction: column;
 justify-content: space-between; */
+
+          /* Подвал */
+.footer {
+  background-color: #F4F4F4;
+}
+
+.foot-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__contact {
+  padding-top: 39px;
+}
+
+          /* Подвал: Логотип */
+.foot-info__logo {
+  margin-left: 37px;
+}
+
+.logo__name {
+  font-size: 3rem;
+}
+
+.logo__descript {
+  line-height: 1rem;
+}
+
+          /* Подвал: Адрес, др. информация */
+.foot-info__text {
+  max-width: 420px;
+  margin-top: 3px;
+
+  line-height: 1.5rem;
+}
+
+          /* Подвал: Меню */
+.foot-info__menu {
+  width: 266px;
+  margin-top: 2px;
+}
+
+.foot-menu__item {
+  line-height: 1.5rem;
+}
+
+          /* Подвал: Контакты */
+.foot-info__contact {
+  margin-right: 16px;
+  margin-top: 17px;
+
+  line-height: 1.9rem;
+}
+
+          /* Подвал: Логотипы-ссылки */
+.footer__links {
+  padding-top: 49px;
+  /* padding-right: 57px; */
+  padding-bottom: 40px;
+}
+
+.logo-links {
+  /* display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: minmax(0, 324px) repeat(4, 260px);
+}
+
+.logo-links__item {
+  margin-top: 12px;
+}
