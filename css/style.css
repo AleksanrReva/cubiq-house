@@ -10,10 +10,6 @@
   text-rendering: optimizeLegibility;
 }
 
-.page_uppercase {
-  text-transform: uppercase;
-}
-
           /* Общие */
 * {
   -webkit-box-sizing: border-box;
@@ -22,17 +18,38 @@
   box-sizing: border-box;
 }
 
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_as-typed {
+  text-transform: none;
+}
+
 .hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.off {
+  display: none;
 }
 
 .link {
   text-decoration: none;
   color: #000000;
+}
+
+.button {
+  background: none;
+  border: none;
 }
 
 .focus {
@@ -80,6 +97,10 @@
 .page__element {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.bg_grey {
+  background-color: #F4F4F4;
 }
 
           /* Шапка общее */
@@ -148,45 +169,130 @@
 }
 
           /* Контент */
+.main__block-box {
+  min-height: 900px;
+}
+
 .project {
   display: flex;
+  /* flex-wrap: wrap; */
 }
 
           /* Контент: Описание */
+.сolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .project__text {
   max-width: 342px;
+  max-height: 752px;
   margin-left: 57px;
 
   text-align: right;
 }
 
-.text__header {
+.сolumn__header {
   margin: 0;
-  line-height: 2rem;
+  line-height: 2.1rem;
+  margin-top: -0.1rem;
 }
 
-.text__subheader {
+.сolumn__subheader {
   margin-top: 5.38rem;
   line-height: 1.4rem;
 }
 
-.text__paragraph {
+.сolumn__paragraph {
   max-width: 285px;
+  margin-top: 4.85rem;
 
-  text-transform: none;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: .88rem;
+}
+
+.line_height {
   line-height: 1.33rem;
 }
 
-/* display: flex;
-flex-direction: column;
-justify-content: space-between; */
 
-          /* Подвал */
-.footer {
-  background-color: #F4F4F4;
+          /* Контент: Галерея, Характеристики, Комплектация */
+.project__details {
+  width: 76.25%;
 }
 
+.header-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__nav {
+  margin-top: 0.65rem;
+  margin-left: 41px;
+}
+
+.frame-nav__radio-btn:checked + .frame-nav__label {
+  font-weight: 700;
+}
+
+.frame-nav__label {
+  margin: 0 10px 0;
+}
+
+.header-form__btn {
+  margin-right: 40px;
+}
+
+          /* Контент: Комплектация */
+.content__box {
+  min-height: 698px;
+  
+  margin-top: 19px;
+  margin-left: 23px;
+}
+
+.equipment {
+  display: grid;
+  grid-template-columns: 1.53fr 1.15fr 1.4fr;
+  grid-template-rows: 8.13rem 5.74rem 1fr;
+}
+
+.equipment__header {
+  margin-top: 6.81rem;
+}
+
+.equipment__header_align {
+  text-align: center;
+}
+
+.equipment__position {
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  margin-left: 22.4%;
+}
+
+.equipment__sub-header {
+  margin-top: .4rem;
+}
+
+.equipment__list {
+  margin-top: 5px;
+
+  font-size: .88rem;
+  line-height: 2.1rem;
+}
+
+.equipment__list_margin {
+  margin-left: 36px;
+}
+
+.equipment__list-subheader li:first-child {
+  margin-left: -17px;
+}
+
+          /* Подвал */
 .foot-info {
   display: flex;
   justify-content: space-around;
@@ -238,14 +344,10 @@ justify-content: space-between; */
           /* Подвал: Логотипы-ссылки */
 .footer__links {
   padding-top: 49px;
-  /* padding-right: 57px; */
   padding-bottom: 40px;
 }
 
 .logo-links {
-  /* display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: minmax(0, 324px) repeat(4, 260px);
 }
