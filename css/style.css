@@ -216,7 +216,7 @@
 }
 
 
-          /* Контент: Галерея, Характеристики, Комплектация */
+          /* Контент */
 
 .project__details {
   width: 76.25%;
@@ -232,7 +232,7 @@
   margin-left: 41px;
 }
 
-.frame-nav__radio-btn:checked + .frame-nav__label {
+input[type="radio"]:checked + span {
   font-weight: 700;
 }
 
@@ -242,6 +242,22 @@
 
 .header-form__btn {
   margin-right: 40px;
+}
+
+
+          /* Контент: Галерея */
+
+.form-view {
+  position: relative;
+  z-index: 50;
+}
+
+.frame-subnav__label {
+  position: relative;
+  top: 17px;
+  left: 18px;
+
+  margin: 0 10px 0;
 }
 
 
@@ -343,6 +359,10 @@
 
 
           /* Подвал */
+
+.page__footer {
+  margin-top: 50px;
+}
 
 .foot-info {
   display: flex;

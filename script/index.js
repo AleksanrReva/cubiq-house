@@ -1,27 +1,30 @@
-const navRow = document.querySelector('.frame-nav');
-const radioBtns = document.querySelectorAll('.frame-nav__radio-btn');
-const tabs = document.querySelectorAll('.content__box');
+const sections = document.querySelectorAll('.content');
+const sectionsArr = Array.prototype.slice.call(sections, 0);
 
-function switchingTabs(event) {
-  if (event.target.tagName === 'INPUT') {
-    for (let i = 0; i < radioBtns.length; i++) {
-      if (radioBtns[i].checked) {
-        tabs[i].classList.toggle('off');
-        console.log([tabs[i].parentNode.children].filter(n => n !== tabs[i]))
-      }
-      // console.log("temp");
-    }
-  //   radioBtns.forEach(function(radio) {
-  //     if (radio.checked) {
-  //       console.log(radio.value);
-  //     }
-  //   });
-    // console.log('Yes');
-  }
-  // console.log(event.target.tagName);
-  // radioBtns.forEach(function(radio) {
-  //   console.log(radio.value);
-  // });
-};
+sectionsArr.forEach(function(section, index, sections) {
 
-navRow.addEventListener('click', switchingTabs);
+  section.addEventListener('click', function(event) {
+
+    if (event.target.className.includes('radio-btn_hidden')) {
+      
+      const tabs = section.querySelectorAll('.content__box');
+
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.add('off');
+      };
+
+      section.querySelector(`.${event.target.value}`).classList.remove('off');
+    };
+
+    if (event.target.className.includes('radio-btn-subnav')) {
+      
+      const tabs = section.querySelectorAll('.ant-carousel');
+
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.add('off');
+      };
+
+      section.querySelector(`.${event.target.value}`).classList.remove('off');
+    };
+  });
+});
