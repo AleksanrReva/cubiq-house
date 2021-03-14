@@ -1,0 +1,427 @@
+          /* Страница */
+.page {
+  font-family: 'Nunito', 'Arial', sans-serif;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+
+          /* Общие */
+
+* {
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_as-typed {
+  text-transform: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.button {
+  background: none;
+  border: none;
+}
+
+.focus {
+  font-weight: 700;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.font_extra-light {
+  font-weight: 200;
+}
+
+.font_light {
+  font-weight: 300;
+}
+
+.font_regular {
+  font-weight: 400;
+}
+
+.font_size-18 {
+  font-size: 1.13rem;
+}
+
+.font_size-24 {
+  font-size: 1.5rem;
+}
+
+.font_size-36 {
+  font-size: 2.25rem;
+}
+
+.font_size-12 {
+  font-size: .75rem;
+}
+
+.font_size-14 {
+  font-size: .88rem;
+}
+
+.style-none {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page__element {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bg_grey {
+  background-color: #F4F4F4;
+}
+
+
+          /* Шапка общее */
+
+.header__top {
+  margin-top: 43px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+          /* Шапка: Лого, тел, сети  */
+
+.logo__item {
+  margin: 0;
+  margin-left: 41px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.info__links {
+  margin-right: 41px;
+}
+
+.soc-list {
+  display: flex;
+}
+
+.soc-list__item {
+  margin-top: 13px;
+  margin-left: 17px;
+  margin-right: 5px;
+}
+
+
+          /* Шапка: Лого страницы, меню  */
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu {
+  max-width: 583px;
+  height: 594px;
+
+  margin: 0 auto;
+  margin-top: 173px;
+}
+
+.logo-page__descript {
+  max-width: 215px;
+  margin-top: 16px;
+
+  line-height: 1rem;
+}
+
+.menu__links {
+  margin-top: 10px;
+}
+
+.links__item {
+  line-height: 2.5rem;
+}
+
+
+          /* Контент */
+
+.main__block-box {
+  min-height: 900px;
+}
+
+.project {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+
+          /* Контент: Описание */
+
+.сolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project__text {
+  max-width: 342px;
+  max-height: 752px;
+  margin-left: 57px;
+
+  text-align: right;
+}
+
+.сolumn__header {
+  margin: 0;
+  line-height: 2.1rem;
+  margin-top: -0.1rem;
+}
+
+.сolumn__subheader {
+  margin-top: 5.38rem;
+  line-height: 1.4rem;
+}
+
+.сolumn__paragraph {
+  max-width: 285px;
+  margin-top: 4.85rem;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.line_height {
+  line-height: 1.33rem;
+}
+
+
+          /* Контент: Галерея, Характеристики, Комплектация */
+
+.project__details {
+  width: 76.25%;
+}
+
+.header-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__nav {
+  margin-top: 0.65rem;
+  margin-left: 41px;
+}
+
+.frame-nav__radio-btn:checked + .frame-nav__label {
+  font-weight: 700;
+}
+
+.frame-nav__label {
+  margin: 0 10px 0;
+}
+
+.header-form__btn {
+  margin-right: 40px;
+}
+
+
+          /* Контент: Характеристики */
+
+.character {
+  display: flex;
+}
+
+.character__img {
+  height: 100%;
+
+  mix-blend-mode: multiply;
+}
+
+.character__data {
+  margin-top: 6rem;
+}
+
+.data__list {
+  margin-bottom: 3.45rem;
+
+  line-height: .33rem;
+}
+
+.li__header {
+  margin-bottom: 1rem;
+}
+
+.char-list-st__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tempus {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+
+          /* Контент: Комплектация */
+
+.content__box {
+  min-height: 698px;
+  
+  margin-top: 19px;
+  margin-left: 23px;
+}
+
+.equipment {
+  display: grid;
+  grid-template-columns: 1.53fr 1.15fr 1.4fr;
+  grid-template-rows: 8.13rem 5.74rem 1fr;
+}
+
+.equipment__header {
+  margin-top: 6.81rem;
+}
+
+.equipment__header_align {
+  text-align: center;
+}
+
+.equipment__position {
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  margin-left: 22.4%;
+}
+
+.equipment__sub-header {
+  margin-top: .4rem;
+}
+
+.equipment__list {
+  margin-top: 5px;
+  line-height: 2.1rem;
+}
+
+.equipment__list_margin {
+  margin-left: 36px;
+}
+
+.equipment__list-subheader li:first-child {
+  margin-left: -17px;
+}
+
+
+          /* Подвал */
+
+.foot-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__contact {
+  padding-top: 39px;
+}
+
+
+          /* Подвал: Логотип */
+
+.foot-info__logo {
+  margin-left: 37px;
+}
+
+.logo__name {
+  font-size: 3rem;
+}
+
+.logo__descript {
+  line-height: 1rem;
+}
+
+
+          /* Подвал: Адрес, др. информация */
+
+.foot-info__text {
+  max-width: 420px;
+  margin-top: 3px;
+
+  line-height: 1.5rem;
+}
+
+
+          /* Подвал: Меню */
+
+.foot-info__menu {
+  width: 266px;
+  margin-top: 2px;
+}
+
+.foot-menu__item {
+  line-height: 1.5rem;
+}
+
+
+          /* Подвал: Контакты */
+
+.foot-info__contact {
+  margin-right: 16px;
+  margin-top: 17px;
+
+  line-height: 1.9rem;
+}
+
+
+          /* Подвал: Логотипы-ссылки */
+
+.footer__links {
+  padding-top: 49px;
+  padding-bottom: 40px;
+}
+
+.logo-links {
+  display: grid;
+  grid-template-columns: minmax(0, 324px) repeat(4, 260px);
+}
+
+.logo-links__item {
+  margin-top: 12px;
+}
+
+
+          /* Общие */
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.off {
+  display: none;
+}
