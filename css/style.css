@@ -262,7 +262,7 @@
 }
 
 .data__list {
-  margin-bottom: 3.45rem;
+  margin-bottom: 5.4rem;
 
   line-height: .33rem;
 }
@@ -271,18 +271,28 @@
   margin-bottom: 1rem;
 }
 
-.char-list-st__item {
-  display: flex;
-  justify-content: space-between;
+.rooms__item {
+  display: grid;
+  grid-template-columns: .8fr .2fr;
+  align-items: baseline;
+
+  width: 83.5%;
+}
+
+.rooms__item p:nth-child(2) {
+  text-align: right;
+}
+
+.resource__item {
+  display: grid;
+  grid-template-columns: minmax(26px, 38px) minmax(170px, 190px) 70px 55px;
   align-items: center;
 }
 
-.tempus {
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
+.resource__item p:nth-child(3) {
+  margin-right: .3rem;
+  text-align: right;
 }
-
 
           /* Контент: Комплектация */
 
