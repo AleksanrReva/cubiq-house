@@ -5,7 +5,7 @@
   }
 } */
 
-@media screen and (min-width: 641px) and (max-width: 910px) {
+/* @media screen and (min-width: 641px) and (max-width: 910px) {
   .ant-carousel {
     max-width: 540px;
   }
@@ -15,14 +15,14 @@
   .ant-carousel {
     max-width: 270px;
   }
-}
+} */
 
-.ant-carousel {
-  /* margin: 50px auto auto;
+/* .ant-carousel {
+  margin: 50px auto auto;
   padding-top: 10px;
   border: 1px solid #ccd;
-  background-color: white; */
-}
+  background-color: white;
+} */
 
 /* .ant-carousel-element {
   width: 270px;
@@ -98,6 +98,8 @@ div.ant-carousel-dots {
   top: 713px;
   z-index: 30;
   text-align: right;
+  /* display: flex;
+  justify-content: flex-end; */
 }
 
 span.ant-dot {

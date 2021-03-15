@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Document</title>
+  <title>cubiq.house &mdash; конструктор для сборки загородного дома</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -16,6 +16,51 @@
 </head>
 
 <body>
+  <form class="send-form page__form page font_light text_as-typed off" novalidate name="order" action="" method="POST">
+    <button class="send-form__btn-close button style-none" type="button">
+      <img src="./images/icons/close.svg" alt="X" width="24" height="24">
+    </button>
+
+    <div class="send-form__field">
+      <input class="send-form__input send-form__input_width text_uppercase" type="text" name="name" 
+        pattern="^[А-ЯЁ][а-яё]+$" minlength="2" maxlength="20"/>
+      <span class="send-form__error font_size-12">Имя или Телефон заполнено некорректно</span>
+      <span class="">Имя*</span>
+
+      <input class="send-form__input send-form__input_width text_uppercase" type="tel" name="tel"
+        pattern="^(8|\+7)((\s?\(\d{3}\)\s?)|(\s\d{3}-)|(\s?\d{3})\s?)(\d+-?){1,}$" minlength="11" maxlength="18"/>
+      <span class="">Телефон*</span>
+    </div>
+
+    <div class="send-form__field">
+      <input class="send-form__input text_uppercase" type="email" name="email" 
+        pattern="^[\w\.-]{3,32}@[\w\.-]{2,}\.[\w]{2,4}$"/>
+      <span class="send-form__error font_size-12">Поле заполнено некорректно</span>
+      <span class="">E-mail</span>
+    </div>
+
+    <div class="send-form__field">
+      <input class="send-form__input text_uppercase" type="text" name="location"/>
+      <span class="">Локация</span>
+    </div>
+    
+    <div class="send-form__field">
+      <textarea class="send-form__input send-form__comment text_uppercase" name="comment" cols="46" rows="15" 
+        minlength="10" maxlength="210">Сообщение 0/210</textarea>
+    </div>
+
+    <p class="send-form__text font_size-12">
+      * поля обязательные для заполнения.<br />
+      Отправляя заявку вы соглашаетесь на обработку 
+      персональных данных в соответствии с 
+      <a class="link" href="#" title="" target="_blank">
+        <strong>условиями</strong>
+      </a>
+    </p>
+
+    <button class="send-form__button button text_uppercase focus font_size-18" type="submit">Отправить заявку</button>
+</form>
+
   <div class="page text_uppercase font_light">
 
     <header class="header page__element">
@@ -131,7 +176,7 @@
             </p>
           </div>
 
-          <p class="сolumn__price line_height font_size-36 font_regular style-none">
+          <p class="сolumn__price line_height font_size-36 font_regular style-none balancer">
             3 900 000 &#8381;<br />
             
             <span class="font_size-12 font_light text_as-typed">
@@ -211,7 +256,7 @@
               <div class="ant-carousel-dots"></div>
             </div>
 
-            <form class="form-view font_size-18">
+            <form class="gallery__subnav form-view font_size-18">
               <label class="frame-subnav__label">
                 <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="exterior" checked>
                 <span>Экстерьер</span>
@@ -381,7 +426,7 @@
             </p>
           </div>
 
-          <p class="сolumn__price line_height font_size-36 font_regular style-none">
+          <p class="сolumn__price line_height font_size-36 font_regular style-none balancer">
             4 100 000 &#8381;<br />
             
             <span class="font_size-12 font_light text_as-typed">
@@ -461,7 +506,7 @@
               <div class="ant-carousel-dots"></div>
             </div>
 
-            <form class="form-view font_size-18">
+            <form class="gallery__subnav form-view font_size-18">
               <label class="frame-subnav__label">
                 <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="exterior" checked>
                 <span>Экстерьер</span>
@@ -631,7 +676,7 @@
             </p>
           </div>
 
-          <p class="сolumn__price line_height font_size-36 font_regular style-none">
+          <p class="сolumn__price line_height font_size-36 font_regular style-none balancer">
             3 250 000 &#8381;<br />
             
             <span class="font_size-12 font_light text_as-typed">
@@ -711,7 +756,7 @@
               <div class="ant-carousel-dots"></div>
             </div>
 
-            <form class="form-view font_size-18">
+            <form class="gallery__subnav form-view font_size-18">
               <label class="frame-subnav__label">
                 <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="exterior" checked>
                 <span>Экстерьер</span>
@@ -861,7 +906,7 @@
       </article>
     </main>
 
-    <footer class="footer bg_grey page__footer">
+    <footer class="footer bg_grey page__footer off">
       <section class="foot-info footer__contact page__element">
 
         <a class="foot-info__logo logo link" href="#" title="" target="_blank">

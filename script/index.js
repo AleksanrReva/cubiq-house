@@ -16,6 +16,12 @@ sectionsArr.forEach(function(section, index, sections) {
       section.querySelector(`.${event.target.value}`).classList.remove('off');
     };
 
+    if (event.target.value === 'character' || event.target.value === 'equipment') {
+      section.previousElementSibling.querySelector(`.сolumn__price`).classList.remove('balancer');
+    } else {
+      section.previousElementSibling.querySelector(`.сolumn__price`).classList.add('balancer');
+    };
+
     if (event.target.className.includes('radio-btn-subnav')) {
       
       const tabs = section.querySelectorAll('.ant-carousel');
