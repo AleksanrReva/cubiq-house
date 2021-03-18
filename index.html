@@ -16,51 +16,6 @@
 </head>
 
 <body>
-  <form class="send-form page__form page font_light text_as-typed off" novalidate name="order" action="" method="POST">
-    <button class="send-form__btn-close button style-none" type="button">
-      <img src="./images/icons/close.svg" alt="X" width="24" height="24">
-    </button>
-
-    <div class="send-form__field">
-      <input class="send-form__input send-form__input_width text_uppercase" type="text" name="name" 
-        pattern="^[А-ЯЁ][а-яё]+$" minlength="2" maxlength="20"/>
-      <span class="send-form__error font_size-12">Имя или Телефон заполнено некорректно</span>
-      <span class="">Имя*</span>
-
-      <input class="send-form__input send-form__input_width text_uppercase" type="tel" name="tel"
-        pattern="^(8|\+7)((\s?\(\d{3}\)\s?)|(\s\d{3}-)|(\s?\d{3})\s?)(\d+-?){1,}$" minlength="11" maxlength="18"/>
-      <span class="">Телефон*</span>
-    </div>
-
-    <div class="send-form__field">
-      <input class="send-form__input text_uppercase" type="email" name="email" 
-        pattern="^[\w\.-]{3,32}@[\w\.-]{2,}\.[\w]{2,4}$"/>
-      <span class="send-form__error font_size-12">Поле заполнено некорректно</span>
-      <span class="">E-mail</span>
-    </div>
-
-    <div class="send-form__field">
-      <input class="send-form__input text_uppercase" type="text" name="location"/>
-      <span class="">Локация</span>
-    </div>
-    
-    <div class="send-form__field">
-      <textarea class="send-form__input send-form__comment text_uppercase" name="comment" cols="46" rows="15" 
-        minlength="10" maxlength="210">Сообщение 0/210</textarea>
-    </div>
-
-    <p class="send-form__text font_size-12">
-      * поля обязательные для заполнения.<br />
-      Отправляя заявку вы соглашаетесь на обработку 
-      персональных данных в соответствии с 
-      <a class="link" href="#" title="" target="_blank">
-        <strong>условиями</strong>
-      </a>
-    </p>
-
-    <button class="send-form__button button text_uppercase focus font_size-18" type="submit">Отправить заявку</button>
-</form>
-
   <div class="page text_uppercase font_light">
 
     <header class="header page__element">
@@ -73,6 +28,78 @@
           
           <p class="logo__item font_size-12">Сборно-разборные здания</p>
         </a>
+
+        <div class="info__pop-up-menu popup-nav off">
+          <button class="popup-nav__btn-close info__btn-menu button style-none" type="button">
+            <img class="pop-up-close" src="./images/icons/close.svg" alt="X" width="24" height="24">
+          </button>
+
+          <ul class="popup-nav__links menu__links style-none font_size-24">
+            <li class="links__item focus">
+              <a class="link" href="#" title="">
+                Каталог
+              </a>
+            </li>
+  
+            <li class="links__item">
+              <a class="link" href="#" title="">
+                Новые возможности
+              </a>
+            </li>
+  
+            <li class="links__item">
+              <a class="link" href="#" title="">
+                Оборудование
+              </a>
+            </li>
+  
+            <li class="links__item">
+              <a class="link" href="#" title="">
+                Особенности
+              </a>
+            </li>
+  
+            <li class="links__item">
+              <a class="link" href="#" title="">
+                Как заказать
+              </a>
+            </li>
+  
+            <li class="links__item">
+              <a class="link" href="#" title="">
+                Доставка и сборка
+              </a>
+            </li>
+          </ul>
+
+          <a class="popup-nav__phone font_size-36 link" href="tel:8800776235" title="" target="_blank">
+            8 800 77 62 35
+          </a>
+          
+          <ul class="popup-nav__soc-ico soc-list style-none">
+            <li class="soc-list__item">
+              <a href="#" title="" target="_blank">
+                <img src="./images/icons/insta@32.svg" alt="Instagram" width="32" height="32">
+              </a>
+            </li>
+
+            <li class="soc-list__item">
+              <a href="#" title="" target="_blank">
+                <img src="./images/icons/mail@32.svg" alt="E-mail" width="32" height="32">
+              </a>
+            </li>
+
+            <li class="soc-list__item">
+              <a href="#" title="" target="_blank">
+                <img src="./images/icons/whats@32.svg" alt="WhatsApp" width="32" height="32">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="info__btn-menu button style-none" type="button">
+          <img class="pop-up-open" src="./images/icons/menu.svg" alt="&equiv;" width="24" height="24">
+        </button>
 
         <div class="contacts info__links">
           <a class="font_size-36 link" href="tel:8800776235" title="" target="_blank">
@@ -191,19 +218,29 @@
           <form class="header-form content__nav font_size-18">
             <div class="frame-nav">
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="gallery" checked>
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="gallery" checked>
                 <span>Галерея</span>
               </label>
 
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="character">
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="character">
                 <span>Характеристики</span>
               </label>
               
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="equipment">
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="equipment">
                 <span>Комплектация</span>
               </label>
+            </div>
+
+            <div class="frame-select">
+              <select class="frame-select__box select-nav text_uppercase font_light" name="tab-select">
+                <option class="frame-select__option" value="gallery" selected>Галлерея</option>
+
+                <option class="frame-select__option" value="character">Характеристики</option>
+
+                <option class="frame-select__option" value="equipment">Комплектация</option>
+              </select>
             </div>
 
             <button class="header-form__btn button text_uppercase style-none" name="order-pop-up" type="button">
@@ -258,19 +295,29 @@
 
             <form class="gallery__subnav form-view font_size-18">
               <label class="frame-subnav__label">
-                <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="exterior" checked>
+                <input class="radio-btn-subnav hidden" type="radio" name="subnav" value="exterior" checked>
                 <span>Экстерьер</span>
               </label>
 
               <label class="frame-subnav__label">
-                <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="interior">
+                <input class="radio-btn-subnav hidden" type="radio" name="subnav" value="interior">
                 <span>Интерьер</span>
               </label>
+
+              <div class="frame-select form-view__select">
+                <select class="view-select__box select-nav text_uppercase font_light" name="tab-select">
+                  <option class="frame-select__option" value="exterior" selected>Экстерьер</option>
+  
+                  <option class="frame-select__option" value="interior">Интерьер</option>
+                </select>
+              </div>
             </form>
           </div>
 
-          <div class="character content__box bg_grey off"> 
-            <img class="character__img" src="./images/planirovka-bungalo.png" alt="Планировка Бунгало 4000x4000">
+          <div class="character content__box bg_grey off">
+            <div class="wrapper">
+              <img class="character__img" src="./images/planirovka-bungalo.png" alt="Планировка Бунгало 4000x4000">
+            </div> 
 
             <div class="data character__data">
               <ul class="rooms data__list style-none font_size-14">
@@ -441,19 +488,29 @@
           <form class="header-form content__nav font_size-18">
             <div class="frame-nav">
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="gallery" checked>
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="gallery" checked>
                 <span>Галерея</span>
               </label>
 
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="character">
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="character">
                 <span>Характеристики</span>
               </label>
               
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="equipment">
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="equipment">
                 <span>Комплектация</span>
               </label>
+            </div>
+
+            <div class="frame-select">
+              <select class="frame-select__box select-nav text_uppercase font_light" name="tab-select">
+                <option class="frame-select__option" value="gallery" selected>Галлерея</option>
+
+                <option class="frame-select__option" value="character">Характеристики</option>
+
+                <option class="frame-select__option" value="equipment">Комплектация</option>
+              </select>
             </div>
 
             <button class="header-form__btn button text_uppercase style-none" name="order-pop-up" type="button">
@@ -508,19 +565,29 @@
 
             <form class="gallery__subnav form-view font_size-18">
               <label class="frame-subnav__label">
-                <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="exterior" checked>
+                <input class="radio-btn-subnav hidden" type="radio" name="subnav" value="exterior" checked>
                 <span>Экстерьер</span>
               </label>
 
               <label class="frame-subnav__label">
-                <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="interior">
+                <input class="radio-btn-subnav hidden" type="radio" name="subnav" value="interior">
                 <span>Интерьер</span>
               </label>
+
+              <div class="frame-select form-view__select">
+                <select class="view-select__box select-nav text_uppercase font_light" name="tab-select">
+                  <option class="frame-select__option" value="exterior" selected>Экстерьер</option>
+  
+                  <option class="frame-select__option" value="interior">Интерьер</option>
+                </select>
+              </div>
             </form>
           </div>
 
-          <div class="character content__box bg_grey off"> 
-            <img class="character__img" src="./images/planirovka-bungalo.png" alt="Планировка Бунгало 4000x4000">
+          <div class="character content__box bg_grey off">
+            <div class="wrapper">
+              <img class="character__img" src="./images/planirovka-bungalo.png" alt="Планировка Бунгало 4000x4000">
+            </div>
 
             <div class="data character__data">
               <ul class="rooms data__list style-none font_size-14">
@@ -691,19 +758,29 @@
           <form class="header-form content__nav font_size-18">
             <div class="frame-nav">
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="gallery" checked>
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="gallery" checked>
                 <span>Галерея</span>
               </label>
 
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="character">
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="character">
                 <span>Характеристики</span>
               </label>
               
               <label class="frame-nav__label">
-                <input class="radio-btn_hidden hidden" type="radio" name="navigation" value="equipment">
+                <input class="radio-btn_hidden hidden" type="radio" name="tab-nav" value="equipment">
                 <span>Комплектация</span>
               </label>
+            </div>
+
+            <div class="frame-select">
+              <select class="frame-select__box select-nav text_uppercase font_light" name="tab-select">
+                <option class="frame-select__option" value="gallery" selected>Галлерея</option>
+
+                <option class="frame-select__option" value="character">Характеристики</option>
+
+                <option class="frame-select__option" value="equipment">Комплектация</option>
+              </select>
             </div>
 
             <button class="header-form__btn button text_uppercase style-none" name="order-pop-up" type="button">
@@ -758,20 +835,30 @@
 
             <form class="gallery__subnav form-view font_size-18">
               <label class="frame-subnav__label">
-                <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="exterior" checked>
+                <input class="radio-btn-subnav hidden" type="radio" name="subnav" value="exterior" checked>
                 <span>Экстерьер</span>
               </label>
 
               <label class="frame-subnav__label">
-                <input class="radio-btn-subnav hidden" type="radio" name="navigation" value="interior">
+                <input class="radio-btn-subnav hidden" type="radio" name="subnav" value="interior">
                 <span>Интерьер</span>
               </label>
+
+              <div class="frame-select form-view__select">
+                <select class="view-select__box select-nav text_uppercase font_light" name="tab-select">
+                  <option class="frame-select__option" value="exterior" selected>Экстерьер</option>
+  
+                  <option class="frame-select__option" value="interior">Интерьер</option>
+                </select>
+              </div>
             </form>
           </div>
 
           <div class="character content__box bg_grey off"> 
-            <img class="character__img" src="./images/planirovka-bungalo.png" alt="Планировка Бунгало 4000x4000">
-
+            <div class="wrapper">
+              <img class="character__img" src="./images/planirovka-bungalo.png" alt="Планировка Бунгало 4000x4000">
+            </div>
+            
             <div class="data character__data">
               <ul class="rooms data__list style-none font_size-14">
                 <li class="rooms__item focus">
@@ -906,13 +993,13 @@
       </article>
     </main>
 
-    <footer class="footer bg_grey page__footer off">
+    <footer class="footer bg_grey page__footer">
       <section class="foot-info footer__contact page__element">
 
         <a class="foot-info__logo logo link" href="#" title="" target="_blank">
-          <h1 class="logo__name font_regular style-none">
+          <h6 class="logo__name font_regular style-none">
             Iterium<span class="font_extra-light font_size-24">.Tech</span>
-          </h1>
+          </h6>
           
           <p class="logo__descript font_size-12 font_regular style-none">
             Сборно-разборные здания
@@ -995,41 +1082,90 @@
       </section>
 
       <section class="logo-links footer__links page__element">
-        <div class="empty-for-grid"></div>
         <a class="logo-links__item logo link" href="#" title="" target="_blank">
-          <h1 class="logo__item font_size-24">
+          <h6 class="logo__item font_size-24">
             Iterium<span class="font_extra-light">.Service</span>
-          </h1>
+          </h6>
           
           <p class="logo__item font_size-12">Доставка и моонтаж</p>
         </a>
 
         <a class="logo-links__item logo link" href="#" title="" target="_blank">
-          <h1 class="logo__item font_size-24">
+          <h6 class="logo__item font_size-24">
             Iterium<span class="font_extra-light">.Design</span>
-          </h1>
+          </h6>
           
           <p class="logo__item font_size-12">Архитектурное бюро</p>
         </a>
 
         <a class="logo-links__item logo link" href="#" title="" target="_blank">
-          <h1 class="logo__item font_size-24">
+          <h6 class="logo__item font_size-24">
             Iterium<span class="font_extra-light">.Studio</span>
-          </h1>
+          </h6>
           
           <p class="logo__item font_size-12">Конструкторское бюро</p>
         </a>
 
         <a class="logo-links__item logo link" href="#" title="" target="_blank">
-          <h1 class="logo__item font_size-24">
+          <h6 class="logo__item font_size-24">
             Iterium<span class="font_extra-light">.Team</span>
-          </h1>
+          </h6>
           
           <p class="logo__item font_size-12">Вакансии</p>
         </a>
       </section>
     </footer>
   </div>
+
+  <form class="off send-form page__form page font_light text_as-typed" novalidate name="order" action="" method="POST">
+    <button class="send-form__btn-close button style-none" type="button">
+      <img class="form-btn-close" src="./images/icons/close.svg" alt="X" width="24" height="24">
+    </button>
+
+    <div class="grid__wrapper">
+      <div class="send-form__field">
+        <span class="send-form__placeholder">Имя*</span>
+        <input class="send-form__input send-form__input_bigger text_uppercase" type="text" name="name" 
+          pattern="^[А-ЯЁ][а-яё]+$" minlength="2" maxlength="20"/>
+        <span class="send-form__error font_size-12">Заполнено некорректно</span>
+      </div>
+
+      <div class="send-form__field"> 
+        <span class="send-form__placeholder">Телефон*</span> 
+        <input class="send-form__input send-form__input_small text_uppercase" type="tel" name="tel"
+          pattern="^(8|\+7)((\s?\(\d{3}\)\s?)|(\s\d{3}-)|(\s?\d{3})\s?)(\d+-?){1,}$" minlength="11" maxlength="18"/>
+        <span class="send-form__error font_size-12">Номер некорректный</span>
+      </div>
+    </div>
+
+    <div class="send-form__field">
+      <span class="send-form__placeholder">E-mail</span>
+      <input class="send-form__input text_uppercase" type="email" name="email" 
+        pattern="^[\w\.-]{3,32}@[\w\.-]{2,}\.[\w]{2,4}$"/>
+      <span class="send-form__error font_size-12">Поле заполнено некорректно</span>
+    </div>
+
+    <div class="send-form__field">
+      <span class="send-form__placeholder">Локация</span>
+      <input class="send-form__input text_uppercase" type="text" name="location"/>
+    </div>
+    
+    <div class="send-form__field">
+      <textarea class="send-form__input send-form__comment text_uppercase" name="comment" cols="46" rows="15" 
+        minlength="0" maxlength="210">Сообщение</textarea>
+    </div>
+
+    <p class="send-form__text font_size-12">
+      * поля обязательные для заполнения.<br />
+      Отправляя заявку вы соглашаетесь на обработку 
+      персональных данных в соответствии с 
+      <a class="link" href="#" title="" target="_blank">
+        <strong>условиями</strong>
+      </a>
+    </p>
+
+    <button class="send-form__button button text_uppercase focus font_size-18" type="submit">Отправить заявку</button>
+  </form>
 
   <script src="./script/index.js"></script>
   <script src="./script/carousel.js"></script>
